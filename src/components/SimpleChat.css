@@ -1,0 +1,79 @@
+.chat-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 400px;
+  height: 60vh; /* taller chat box */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.chat-header {
+  background-color: #142141;
+  color: white;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.chat-selected-text {
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  max-height: 20%; /* optional, keeps it from taking too much space */
+  overflow-y: auto;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 8px;
+  overflow-y: auto; /* scroll if messages overflow */
+  background-color: #f9f9f9;
+  max-height: 60%; /* ensures it takes most of the chat-box */
+}
+
+.chat-message.user {
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.chat-message.bot {
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 6px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  padding: 8px 12px;
+  background-color: #142141;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
